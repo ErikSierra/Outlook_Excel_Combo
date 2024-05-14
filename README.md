@@ -46,3 +46,5 @@ The script is self-documented with comments explaining the steps involved in pro
 - Ensure Outlook is open and configured on your machine.
 - Check if the script has permissions to access Outlook data.
 - Verify the path and permissions for saving files on your system.
+
+## Note: When running the script multiple times, make sure to move the previously generated Excel file to a different directory or rename it to avoid overwriting it with the new file.
