@@ -8,14 +8,14 @@ from colorama import init, Fore, Style
 init()
 
 def combine_emails():
-    # Connect to Outlook
+    # Connects to Outlook
     outlook = win32com.client.Dispatch("Outlook.Application").GetNamespace("MAPI")
     print(Fore.GREEN + "Successfully connected to Outlook." + Style.RESET_ALL)
     
     inbox = outlook.GetDefaultFolder(6)  # 6 refers to the inbox folder
     messages = inbox.Items
 
-    # Ensure the datetime format is correct for Outlook
+    # Ensures the datetime format is correct for Outlook
     six_days_ago = (datetime.datetime.now() - datetime.timedelta(days=6)).strftime('%m/%d/%Y %I:%M %p')
     filter_condition = f"[ReceivedTime] >= '{six_days_ago}'"
     print(Fore.BLUE + f"Filter Condition: {filter_condition}" + Style.RESET_ALL)
