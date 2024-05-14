@@ -1,3 +1,5 @@
+# This script tests connection to your outlook inbox
+
 import win32com.client
 
 outlook = win32com.client.Dispatch('outlook.application')
